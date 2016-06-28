@@ -1,0 +1,47 @@
+{
+  "namespace": "codecraft.song",
+	"messages": {
+		"SongRecord": {
+			"id": "string",
+			"md5": "string",
+			"sha1": "string",
+			"name": "string",
+			"artist": "string",
+			"album": "string",
+			"byteLength": "int",
+			"url": "string"
+		},
+		"AddSong": {
+			"md5": "string",
+			"sha1": "string",
+			"name": "string",
+			"artist": "string",
+			"album": "string",
+			"byteLength": "int",
+			"url": "string"
+		},
+		"AddSongReply": {
+			"id": "string"
+		},
+		"GetSong": {
+			"id": "string",
+			"token": "string"
+		},
+		"GetSongReply": {
+			"result": "SongRecord option",
+			"error": "string option"
+		}
+	},
+	"services": {
+		"ISongStore": {
+			"add": {
+				"request": "AddSong",
+				"response": "AddSongReply"
+			},
+			"get": {
+				"request": "GetSong",
+				"response": "GetSongReply"
+			}
+		}
+	}
+}
